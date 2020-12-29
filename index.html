@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head\>
@@ -13,9 +14,13 @@
 
 <div class="flex-container">
   <div class="flex-item-left">
+    <!-- Personal profile card -->
     <div class="card">
-      <img src="avatar.jpeg" id="avatar" alt="">
+      <div class="gradient-overlay">
+        <img src="avatar.jpeg" id="avatar" alt="">
+      </div>
       <h3>Ross Keeley</h3>
+      <h5>Front End Developer</h5>
       <div class="card-body">
         <p>email: rjkeeley@gmail.com</p>
         <p>phone: +353 86 891 4223</p>
@@ -26,21 +31,32 @@
         </p>
       </div>
     </div>
-    <div class="card">
+    <!-- Experience card -->
+    <div class="card" id="experience-card">
       <h3>Experience</h3>
     </div>
   </div>
 
   <div class="flex-item-right">
-    <div class="card">
-      <h3>Skills</h3>
-      <p>HTML</p>
-      <p>CSS</p>
-      <p>JavaScript</p>
+    <!-- Skills card -->
+    <div class="card" id="skills-card">
+      <div class="flex-skills-card">
+        <div class="flex-card-left">
+          <h3>Skills</h3>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-card-right">
+
+        </div>
+      </div>
     </div>
+    <!-- Project Title card -->
     <div class="card">
       <h3>Projects</h3>
     </div>
+    <!-- To-Do list App card -->
     <div class="card" id="project-card">
       <div class="flex-project-card">
         <div class="flex-card-left">
@@ -53,14 +69,15 @@
         </div>
       </div>
     </div>
+    <!-- Dice Roll Simulator -->
     <div class="card" id="project-card">
       <div class="flex-project-card">
         <div class="flex-card-left">
-          <img src="to-do-app.png" id="project-card-img" alt="">
+          <img src="dice.png" id="project-card-img" alt="">
         </div>
         <div class="flex-card-right">
-          <h3>To-Do List App</h3>
-          <p>An app that allows users to create a to-do list of task items, delete items, and check/uncheck them off as they are completed.</p>
+          <h3>Dice Roll Simulator</h3>
+          <p>An app that simulates the roll of a dice and displays a random dice face representing the outcome each time a button is pressed.</p>
           <p>#HTML #CSS #JavaScript</p>
         </div>
       </div>
@@ -68,6 +85,6 @@
   </div>
 </div>
 
-
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
