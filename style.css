@@ -4,6 +4,12 @@ body {
   margin: calc(100% * 0.05) calc(100% * 0.11)  0 calc(100% * 0.11);
 }
 
+h2 {
+  font-family: Montserrat;
+  color: #4F4F4F;
+  font-weight: 600;
+}
+
 h3 {
   font-family: Montserrat;
   color: #4F4F4F;
@@ -62,7 +68,7 @@ p {
 }
 
 #card-header {
-  padding: 5px 10px;
+  padding: 5px 22px 5px 22px;
   line-height: px;
 }
 
