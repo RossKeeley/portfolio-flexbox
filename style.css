@@ -4,25 +4,6 @@ body {
   margin: calc(100% * 0.05) calc(100% * 0.11)  0 calc(100% * 0.11);
 }
 
-.flex-container {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.flex-item-left {
-  display: flex;
-  flex-wrap: wrap;
-  width: 28%;
-}
-
-.flex-item-right {
-  display: flex;
-  flex-wrap: wrap;
-  width: 68%;
-}
-
 h3 {
   font-family: Montserrat;
   color: #4F4F4F;
@@ -41,62 +22,48 @@ p {
   color: #828282;
 }
 
+/* Layouts */
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-container .flex-item-right .card .flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container .flex-item-right .card .flex-container .flex-item-left {
+  justify-content: center;
+}
+
+.flex-item-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 28%;
+}
+
+.flex-item-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 68%;
+}
+
+/* Card styling */
 .card {
   border-radius: 15px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
   width: 100%;
   margin-bottom: 25px;
-}
-
-.flex-item-left .card {
   padding: 20px;
 }
 
-.gradient-overlay {
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom right, green, white);
-    /* opacity: 5; */
-  }
-}
-
-.flex-skills-card {
-  display: flex;
-  align-items: right;
-}
-
-.flex-skills-card .flex-card-right {
-
-}
-
-#avatar {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.flex-item-right .card {
-  padding: 20px;
-}
-
-#project-card-img {
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  max-height: 200px;
-  max-width: 180px;
-}
-
-#project-card {
-  display: flex;
-  flex-wrap: wrap;
+#card-header {
+  padding: 5px 10px;
+  line-height: px;
 }
 
 .flex-project-card {
@@ -104,12 +71,53 @@ p {
   align-items: center;
 }
 
-.flex-card-left {
+.flex-project-card .flex-card-left {
   width: 28%;
   text-align: center;
 }
 
-.flex-card-right {
+.flex-project-card .flex-card-right {
   width: 68%;
   padding-left: 15px;
+}
+
+/* Personal profile image styling */
+#avatar {
+  width: 100%;
+  border-radius: 12px;
+}
+
+#project-card-img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+}
+
+/* Button styling */
+#button {
+  color: rgb(96, 161, 69);
+  border-radius: 8px;
+  border: 0.5px solid rgb(96, 161, 69);
+  padding: 5px;
+  margin: 2px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay &::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, green, white);
 }
